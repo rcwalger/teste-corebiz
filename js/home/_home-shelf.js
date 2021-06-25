@@ -1,13 +1,10 @@
 //@prepros-prepend "../components/Shelf/Shelf.js"
+import { get } from 'axios';
 
 $(document).ready(function(){
-    $.ajax({
-        url: `https://corebiz-test.herokuapp.com/api/v1/products`,
-        type: "GET"
-    })
-    .then(function(product) {
-        console.log(product)
-
+    get('https://corebiz-test.herokuapp.com/api/v1/products')
+    .then(function(res) {
+        let product = res.data;
         let $shelf = document.getElementById("js-react-Shelf");
         if( $shelf != null ){
             ReactDOM.render(

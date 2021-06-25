@@ -1,3 +1,5 @@
+import { post } from 'axios';
+
 //Retorna se é um e-mail válido
 function isEmail(email){
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -35,9 +37,25 @@ function FormValidateNewsletter(){
     
     if(isFormValidate){
         console.log("Válido");
-        resetFormNewsletter();
-        toggleOptionNewsletter()
+        sendFormNewsletter()
     }
+}
+
+
+function sendFormNewsletter(){
+    post('https://corebiz-test.herokuapp.com/api/v1/newsletter', {
+        "email": $("#newsletter-email").val(),
+        "name": $("#newsletter-name").val()
+    })
+    .then(function (response) {
+        console.log(response);
+
+        resetFormNewsletter();
+        toggleOptionNewsletter();
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 }
 
 //Quando entra no campo, retira as mensagens de erro
