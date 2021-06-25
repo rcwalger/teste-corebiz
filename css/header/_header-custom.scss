@@ -1,5 +1,10 @@
 #header{
     background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 10px 0 #00000059;
 
     @media (min-width: $screen-lg) {
         padding: 20px 0;        
@@ -30,4 +35,15 @@
     @media (max-width: $screen-lg) {
         order: 2;        
     }
+}
+
+.header-division{
+    @media (min-width: $screen-lg) {
+        padding-top: 87px;        
+    }
+
+    @media (max-width: $screen-lg) {
+        padding-top: 91px;
+    }
+
 }

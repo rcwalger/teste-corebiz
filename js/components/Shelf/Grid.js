@@ -32,7 +32,7 @@ class Grid extends React.Component{
                     />
 
                     <ProductBuy
-                        id={product.id}
+                        id={product.productId}
                     />
                 </div>
             </li>
