@@ -6,6 +6,7 @@ function isEmail(email){
     return regex.test(email);
 }
 
+//Limpa os campos do formulário de newsletter
 function resetFormNewsletter(){
     $("#newsletter-name").val("");
     $("#newsletter-email").val("");
@@ -23,18 +24,21 @@ function FormValidateNewsletter(){
     let fieldName = $("#newsletter-name");
     let fieldMail = $("#newsletter-email");
 
+    //Valida se o campo esta vazio
     if( fieldName.val() == "" ){
         isFormValidate = false;
 
         fieldName.addClass('error');
     }
 
+    //Checa se é um e-mail válido
     if( !isEmail(fieldMail.val()) ){
         isFormValidate = false;
 
         fieldMail.addClass('error');
     }
     
+    //Se os campos estiverem tudo certo, dispara a requisição para cadastrar o Lead
     if(isFormValidate){
         console.log("Válido");
         sendFormNewsletter()

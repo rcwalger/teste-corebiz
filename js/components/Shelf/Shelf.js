@@ -2,6 +2,7 @@
 
 class Shelf extends React.Component{
     
+    //Após renderizar os elementos, executa o slider de produtos
     componentDidMount(){
         $("#js-react-Shelf .shelf-items").slick({
             infinite: false,
@@ -32,6 +33,7 @@ class Shelf extends React.Component{
         })
     }
 
+    //Monta o Grid de produtos para cada produto
     render(){
         let listProduct = this.props.product;
         return(

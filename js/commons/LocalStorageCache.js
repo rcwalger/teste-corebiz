@@ -1,3 +1,4 @@
+//Responsável por manipular o LocalStorage do navegador
 class LocalStorageCache {
 	constructor(key, xpirationInHours = 24) {
 		this.localStorage = window.localStorage

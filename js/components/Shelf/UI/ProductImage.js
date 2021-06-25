@@ -1,6 +1,9 @@
+//Exibe a imagem do produto
 function ProductImage(props){
     let listPrice = props.listPrice;
     let price = props.price;
+
+    //Valida se o produto possuí desconto. Caso sim, adiciona um selo de "OFF"
     let hasDiscount = (listPrice != undefined) && ( (listPrice >= price) );
 
     return(

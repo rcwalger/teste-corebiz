@@ -4,6 +4,7 @@
 //@prepros-prepend "./UI/ProductPrice.js"
 //@prepros-prepend "./UI/ProductBuy.js"
 
+//Estrutura do Grid de cada produto
 class Grid extends React.Component{
     render(){
         let product = this.props.product;

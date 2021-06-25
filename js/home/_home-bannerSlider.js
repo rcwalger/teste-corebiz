@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //Executa o Slider de Banners
     $(".banner-slider").slick({
         infinite: true,
         dots: true,

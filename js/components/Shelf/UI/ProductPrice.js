@@ -1,6 +1,9 @@
+//Preço De
 function ListPrice(props){
     let listPrice = props.listPrice;
     let price = props.price;
+
+    //Valida se o produto possuí desconto. Caso sim, adiciona o prefixo 'de'
     let hasDiscount = (listPrice != undefined) && ( (listPrice >= price) );
 
     return(
@@ -11,9 +14,12 @@ function ListPrice(props){
     )
 }
 
+//Preço Por / Melhor Preço
 function BestPrice(props){
     let listPrice = props.listPrice;
     let price = props.price;
+
+    //Valida se o produto possuí desconto. Caso sim, adiciona o prefixo 'por'
     let hasDiscount = (listPrice != undefined) && ( (listPrice >= price) );
 
     return(
@@ -24,6 +30,7 @@ function BestPrice(props){
     )
 }
 
+//Parcelamento
 function Installments(props){
     let installments = props.installments;
     return(
@@ -81,21 +88,27 @@ class ProductPrice extends React.Component{
     }
 
     render(){
+        //Converte os valores para Real.
         let listPrice = this.numberToReal(this.props.listPrice);
         let price = this.numberToReal(this.props.price)
+
+        //Pega o valor do parcelamento mais vantajoso. Entre número de parcelas e menor preço.
         let bestInstallments = this.bestInstallments(this.props.installments)
     
         return(
     
             <div className="shelf-price">
+
                 <ListPrice
                     listPrice={listPrice}
                     price={price}
                 />
+
                 <BestPrice
                     listPrice={listPrice}
                     price={price}
                 />
+
                 <Installments
                     installments={bestInstallments}
                     numberToReal={this.numberToReal}
