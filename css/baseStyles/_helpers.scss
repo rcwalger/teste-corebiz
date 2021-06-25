@@ -1,0 +1,35 @@
+.hidden{
+    display: none;
+}
+
+.m--hide{
+    @media (max-width: $screen-lg){
+        display: none !important;
+    }
+}
+
+.d--hide{
+    @media (min-width: $screen-lg){
+        display: none !important;
+    }
+}
+
+.overlay{
+    background-color: #1a1a1a;
+    height: 0px;
+    left: 0px;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    transition: opacity 0.3s ease 0s, width 0s ease 0.3s, height 0s ease 0.3s;
+    width: 0px;
+    z-index: 999;
+}
+
+.show-overlay .overlay{
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    transition: opacity .3s;
+}

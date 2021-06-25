@@ -1,0 +1,33 @@
+.footer-location{    
+    @media (max-width: $screen-lg) {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.footer-location__title{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    display: block;
+
+    &:after{
+        content: "";
+        height: 4px;
+        width: 20%;
+        display: block;
+        background: #FFFFFF;
+        margin: 15px 0 25px;
+    }
+}
+
+.footer-location__info{
+    p, a{
+        color: #FFFFFF;
+        font-size: 13px;
+        line-height: 20px;
+        display: block;
+        margin: 8px 0;
+    }
+}

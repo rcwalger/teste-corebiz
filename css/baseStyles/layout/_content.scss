@@ -1,0 +1,19 @@
+/* Largura do Site */
+$widthContent: 1280px;
+$screen-lg: $widthContent;
+
+.content{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: $screen-lg){
+		max-width: $screen-lg;
+	}
+
+	@media (max-width: $screen-lg){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+}

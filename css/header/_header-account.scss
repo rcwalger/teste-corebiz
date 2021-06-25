@@ -1,0 +1,27 @@
+.header-account{
+    @media (min-width: $screen-lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media (max-width: $screen-lg) {
+        display: none;
+    }
+
+    .icon-account{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.header-account__icon{
+    font-size: 0;
+}
+
+.header-account__text{
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-text-default-alt;
+    margin-left: 6px;
+}

@@ -1,0 +1,15 @@
+.header-logo{
+    @media (max-width: $screen-lg) {
+        order: 1;        
+    }
+}
+
+.header-logo__img{
+    @media (min-width: $screen-lg) {
+        width: 180px;
+    }
+    
+    @media (max-width: $screen-lg) {
+        width: 105px;        
+    }
+}

@@ -1,0 +1,19 @@
+/* Avaliações */
+.shelf-rating{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media (min-width: $screen-lg){
+        margin: 0 0 10px 0;
+    }
+    
+    @media (max-width: $screen-lg){
+        margin: 0 0 10px 0;
+    }
+}
+
+.shelf-rating__item{
+    margin: 0 2px;
+}

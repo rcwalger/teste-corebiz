@@ -1,0 +1,17 @@
+.footer-seals{
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $screen-lg) {
+        justify-content: center;        
+    }
+
+    @media (max-width: $screen-lg) {
+        justify-content: space-evenly;
+        width: 100%;        
+    }
+}
+
+.footer-seals__link{
+    margin: 0 12.5px;
+}

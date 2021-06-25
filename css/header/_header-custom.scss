@@ -1,0 +1,33 @@
+#header{
+    background: #FFFFFF;
+
+    @media (min-width: $screen-lg) {
+        padding: 20px 0;        
+    }
+    
+    @media (max-width: $screen-lg) {
+        padding: 10px 0;
+    }
+}
+
+.header-content{
+    @extend .content;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $screen-lg) {
+        flex-wrap: wrap;
+    }
+}
+
+.header-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $screen-lg) {
+        order: 2;        
+    }
+}

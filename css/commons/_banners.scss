@@ -1,0 +1,20 @@
+.banner-slider{
+    width: 100%;
+
+    .slick-dots{
+        position: absolute;
+
+        @media (min-width: $screen-lg) {
+            bottom: 20px;            
+        }
+        
+        @media (max-width: $screen-lg) {
+            bottom: 0;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
