@@ -130,6 +130,7 @@
 .minicart-body {
     max-height: calc(100% - 31px - 62px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .minicart-footer{
