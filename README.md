@@ -26,7 +26,6 @@ Sobre as atividades e funcionalidades que foram desenvolvidas temos:
 4) Para estilizações e customizações, foram utilizados CSS e Javascript(Jquery e React)
 
 
-
 Como rodar
 ====================
 
