@@ -14,8 +14,10 @@ Sobre as atividades e funcionalidades que foram desenvolvidas temos:
 
 1. Construção da estrutura base do layout (Topo, Corpo e Rodapé) utilizando HTML.
 
-2. A vitrine de Produtos foi construida utilizando React como solicitado.
-   - Nela temos opção de adicionar os produtos ao carrinho. Ao adicionar produtos, o contador no Header do site é atualizado, indicando a quantidade atual de produtos presentes no carrinho.
+2. A vitrine de Produtos foi construída utilizando React como solicitado.
+   - Nela temos opção de adicionar os produtos ao carrinho.
+   - Ao adicionar produtos, o contador no Header do site é atualizado, indicando a quantidade atual de produtos presentes no carrinho.
+   - Para a contrução do mini carrinho, assim como seu contador, foi utilizado de estratégia o 'LocalStorage' do navegador para armazenar os produtos que são comprados.
    - Como extra, o mini carrinho foi construido também. Caso deseje visualizar ele basta clicar sobre o icone do Carrinho no Header. Nele temos opção de visualizar os produtos já incluídos, e também uma opção de limpar o carrinho.
 
 3) Para o Newsletter, foi utilizado 'axios' para realizar o submit dos dados.
