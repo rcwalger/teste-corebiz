@@ -9,7 +9,7 @@ class Grid extends React.Component{
     render(){
         let product = this.props.product;
         return(
-            <li className="shelf-item" product-id={product.id}>
+            <li className="shelf-item" product-id={product.productId}>
                 <ProductImage
                     listPrice={product.listPrice}
                     price={product.price}

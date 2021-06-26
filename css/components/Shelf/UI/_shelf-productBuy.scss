@@ -38,6 +38,21 @@
     transition: .3s;
     margin: 15px auto 5px;
     text-transform: uppercase;
+
+    &.selected{
+        background: #28a745;
+
+        @media (min-width: $screen-lg) {
+            &:hover{
+                background: #28a745;
+            }
+        }
+        
+        @media (max-width: $screen-lg) {
+            
+        }
+
+    }
     
     @media (min-width: $screen-lg) {
         width: 125px;
@@ -51,30 +66,5 @@
     
     @media (max-width: $screen-lg) {
         width: 100%;
-    }
-
-    &.loading{
-
-    }
-}
-
-.message-addToCart{
-    position: fixed;
-    bottom: 20px;
-    left: -100%;
-    background: #28a745;
-    box-shadow: 1px 1px 5px 0px #404040;
-    border-radius: 5px;
-    padding: 12px 15px;
-    font-size: 14px;
-    line-height: 14px;
-    color: #FFFFFF;
-    font-family: $font-secondary;
-    font-weight: 700;
-    transition: 1s ease-in-out;
-    user-select: none;
-
-    &.visible{
-        left: 20px;
     }
 }

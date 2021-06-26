@@ -64,5 +64,3 @@ class LocalStorageCache {
 		return diff > this.xpirationInHours
 	}
 }
-
-window.itemsCart = new LocalStorageCache("itens-cart");

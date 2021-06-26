@@ -1,18 +1,33 @@
 //@prepros-prepend "../components/Minicart/Minicart.js"
 
-$(document).ready(function(){
-    //Usa o LocalStorage do navegador do usuário para guardar quais os produtos ele possuí no carrinho
-    //Caso já tenha sido criado anteriormente no navegador, recupera o valor atual, caso contrário cria vazio
-    var items = window.itemsCart.getItems() || [];
+function openMiniCart(){
+    //Abre o Modal de MiniCart
+    let elemMiniCart = $(".minicart");
+    if ( elemMiniCart.hasClass("opened") ){
+        elemMiniCart.removeClass("opened");
+        $("body").removeClass("show-overlay");
+    }else{
+        elemMiniCart.addClass("opened");
+        $("body").addClass("show-overlay");
+    }      
+}
+
+//Gera o Mini Carrinho
+$(document).on("click", ".header-minicart", function(){
+    $(".shelf-item").removeClass("itemRemoved");
+
+    //Atualiza a lista de produtos adicionada ao carrinho antes de renderizar o minicart
+    let itemsCart = new LocalStorageCache("itens-cart");
+    let items = itemsCart.getItems();
+    if(items == null){
+        items = [];
+    }
 
     //Seta os valores no LocalStorage
-    window.itemsCart.setItems(items);
-
-    //Atualiza a quantidade de itens dentro do carrinho e exibe no Header
-    $("#header-minicart__count").text( items.length );
+    itemsCart.setItems(items);
 
     //Renderiza minicart
-    let $minicart = document.getElementById("js-react-Minicart");
+    let $minicart = document.getElementById("js-react-MiniCartList");
     if( $minicart != null ){
         ReactDOM.render(
             <Minicart
@@ -22,34 +37,34 @@ $(document).ready(function(){
         );
     }
 
+    openMiniCart();
 })
 
-//Abre/Fecha Mini Carrinho
-$(".header-minicart").click(function(){
-    let elemMiniCart = $(".minicart");
-    if ( elemMiniCart.hasClass("opened") ){
-        elemMiniCart.removeClass("opened");
+//Limpa o carrinho
+$(".minicart-header__cleanCart").click(function(){
+    //Reseta o LocalStorage
+    var items = [];
+    let itemsCart = new LocalStorageCache("itens-cart");
+    itemsCart.setItems(items);
+
+    //Zera o contador de itens do carrinho
+    $("#header-minicart__count").text("0");
+
+    //Efeito de remover os itens do carrinho.
+    $(".shelf-item").addClass("itemRemoved");
+
+    $(".shelf-productBuy").removeClass("selected").text("Comprar")
+
+    //Fecha o modal
+    setTimeout(function(){
+        $(".minicart").removeClass("opened");
         $("body").removeClass("show-overlay");
-    }else{
-        elemMiniCart.addClass("opened");
-        $("body").addClass("show-overlay");
-    }
-
-    // let items = window.itemsCart.getItems();
-    // //Renderiza minicart
-    // let $minicart = document.getElementById("js-react-Minicart");
-    // if( $minicart != null ){
-    //     console.log("oi", items)
-    //     ReactDOM.render(
-    //         <Minicart
-    //             products={items}
-    //         />,
-    //         $minicart
-    //     );
-    // }
+    }, 500)
 })
 
-$("#overlay").click(function(){
-    $(".minicart").removeClass("opened");
-    $("body").removeClass("show-overlay");
+
+
+//Inicia a página
+$(document).ready(function(){
+    refreshMiniCart();
 })
