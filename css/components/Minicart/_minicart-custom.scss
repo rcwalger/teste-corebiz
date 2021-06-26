@@ -6,7 +6,7 @@
     height: 100%;
     background: #fff;
     transition: .6s;
-    padding: 20px;
+    padding: 15px;
 
     @media (min-width: $screen-lg) {
         right: -420px;
@@ -125,6 +125,11 @@
     text-decoration: underline;
     cursor: pointer;
     user-select: none;
+}
+
+.minicart-body {
+    max-height: calc(100% - 31px - 62px);
+    overflow-y: auto;
 }
 
 .minicart-footer{

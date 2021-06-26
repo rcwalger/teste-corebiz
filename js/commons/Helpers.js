@@ -21,7 +21,7 @@ function refreshMiniCart(product){
 }
 
 //Fecha overlay
-$("#overlay").click(function(){
+$(document).on("click", "#overlay", function(){
     $(".minicart").removeClass("opened");
     $("body").removeClass("show-overlay");
 })

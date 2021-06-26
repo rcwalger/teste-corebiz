@@ -16,7 +16,9 @@ class Shelf extends React.Component{
                     breakpoint: 1280,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3
+                        slidesToScroll: 3,
+                        dots: true,
+                        arrows: false
                     }
                 },
                 {

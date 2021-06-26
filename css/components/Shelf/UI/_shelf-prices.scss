@@ -18,18 +18,19 @@
 
 .shelf-bestPrice{
     font-weight: 700;
-    margin: 0 0 5px 0;
 
     @media (min-width: $screen-lg) {
         font-size: 18px;
         line-height: 24px;
         height: 24px;
+        margin: 0 0 5px 0;
     }
     
     @media (max-width: $screen-lg) {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 20px;
         height: 20px;
+        margin: 0 0 3px 0;
     }
 }
 
@@ -45,8 +46,8 @@
     }
     
     @media (max-width: $screen-lg) {
-        font-size: 10.5px;
-        line-height: 14px;
-        height: 14px;        
+        font-size: 10px;
+        line-height: 12px;
+        height: 12px;
     }
 }
