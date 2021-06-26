@@ -12,16 +12,17 @@ Para realização do teste foi optado por utilizar o Prepos como compilador, poi
 
 Sobre as atividades e funcionalidades que foram desenvolvidas temos:
 
-1) Construção da estrutura base do layout (Topo, Corpo e Rodapé) utilizando HTML.
+1. Construção da estrutura base do layout (Topo, Corpo e Rodapé) utilizando HTML.
 
-2) A vitrine de Produtos foi construida utilizando React como solicitado.
-2.1) Nela temos opção de adicionar os produtos ao carrinho. Ao adicionar produtos, o contador no Header do site é atualizado, indicando a quantidade atual de produtos presentes no carrinho.
-2.3) Como extra, o mini carrinho foi construido também. Caso deseje visualizar ele basta clicar sobre o icone do Carrinho no Header. Nele temos opção de visualizar os produtos já incluídos, e também uma opção de limpar o carrinho.
+2. A vitrine de Produtos foi construida utilizando React como solicitado.
+   - Nela temos opção de adicionar os produtos ao carrinho. Ao adicionar produtos, o contador no Header do site é atualizado, indicando a quantidade atual de produtos presentes no carrinho.
+   - Como extra, o mini carrinho foi construido também. Caso deseje visualizar ele basta clicar sobre o icone do Carrinho no Header. Nele temos opção de visualizar os produtos já incluídos, e também uma opção de limpar o carrinho.
 
 3) Para o Newsletter, foi utilizado 'axios' para realizar o submit dos dados.
-3.1) O formulário de Newsletter conta com a validação dos campos como solicitado na tarefa.
+   - O formulário de Newsletter conta com a validação dos campos como solicitado na tarefa.
 
 4) Para estilizações e customizações, foram utilizados CSS e Javascript(Jquery e React)
+
 
 
 Como rodar
@@ -49,7 +50,7 @@ O Prepros compila seus arquivos, transpila seu JavaScript, recarrega seus navega
   - Dentro da pasta do projeto baixada do Repositório localize o arquivo 'prepos.config'
   - Arraste o arquivo 'prepos.config' no modelo 'Drag and drop' para o Prepos ( https://prepros.io/help/getting-started )
   - Feito isso, agora é só realizar as modificações que deseja nos arquivos .sass ou .js e salvar. 
-  - ** O Prepos compila automáticamente **
+  - **O Prepos compila automáticamente**
 
 - Compilador SASS ( https://prepros.io/help/sass )
   - Os arquivos finais são gerados dentro da pasta 'build'.
